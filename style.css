@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 90px auto;
+	grid-template-rows: 80px auto;
+	/*prettier-ignore*/
+	grid-template-areas: 
+        "header header" 
+        "nav main";
+}
+
+header {
+	grid-area: header;
+	background-color: blueviolet;
+}
+
+nav {
+	grid-area: nav;
+	background-color: chartreuse;
+}
+
+main {
+	grid-area: main;
+	background-color: coral;
+	display: grid;
+	grid-template-rows: repeat(5, minmax(400px, 1fr));
+	grid-template-columns: 1fr 1fr;
+	/*prettier-ignore*/
+	grid-template-areas:
+        "dashboard dashboard"
+        "traffic mobile"
+        "social social"
+        "new-members activity"
+        "message settings";
+}
+
+.dashboard {
+	grid-area: dashboard;
+	background-color: #eee;
+}
+
+.traffic {
+	grid-area: traffic;
+	background-color: #fff;
+}
+
+.mobile {
+	grid-area: mobile;
+	background-color: #aaa;
+}
+
+.social {
+	grid-area: social;
+	background-color: #eee;
+}
+
+.new-members {
+	grid-area: new-members;
+	background-color: #fff;
+}
+
+.activity {
+	grid-area: activity;
+	background-color: #aaa;
+}
+
+.message {
+	grid-area: message;
+	background-color: #aaa;
+}
+
+.settings {
+	grid-area: settings;
+	background-color: #eee;
+}
