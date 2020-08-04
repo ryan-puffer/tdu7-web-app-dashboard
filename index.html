@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web App Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="grid-container">
-        <header>App title</header>
-        <nav>icons</nav>
+        <header>
+            <div class="your-app"><span style="font-weight: bold">Your</span>App&trade;</div>
+            <div class="header-right">
+                <div class="bell-icon">
+                    <img src="icons/icon-bell.svg" alt="bell icon">
+                </div>
+                <div class="user-name">
+                    <div><img class="profile-pic" src="images/member-1.jpg" alt="profile image"></div>
+                    <div>Ryan Puffer</div> 
+                </div>
+            </div>
+        </header>
+        <nav>
+            <img src="icons/icon-dashboard.svg" alt="">
+            <img src="icons/icon-members.svg" alt="">
+            <img src="icons/icon-visits.svg" alt="">
+            <img src="icons/icon-settings.svg" alt="">
+        </nav>
         <main>
-            <div class="dashboard"></div>
-            <div class="traffic"></div>
-            <div class="mobile"></div>
-            <div class="social"></div>
-            <div class="new-members"></div>
-            <div class="activity"></div>
-            <div class="message"></div>
-            <div class="settings"></div>
+            <div class="dashboard">TRAFFIC</div>
+            <div class="traffic">DAILY TRAFFIC</div>
+            <div class="mobile">MOBILE USERS</div>
+            <div class="social">SOCIAL STATS</div>
+            <div class="new-members">NEW MEMBERS</div>
+            <div class="activity">RECENT ACTIVITY</div>
+            <div class="message">MESSAGE USERS</div>
+            <div class="settings">SETTINGS</div>
         </main>
     </div>
     

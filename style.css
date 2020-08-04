@@ -3,6 +3,11 @@
 	padding: 0;
 }
 
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 62.5%;
+}
+
 .grid-container {
 	display: grid;
 	grid-template-columns: 90px auto;
@@ -16,11 +21,24 @@
 header {
 	grid-area: header;
 	background-color: blueviolet;
+	font-weight: 200;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 nav {
 	grid-area: nav;
 	background-color: chartreuse;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+nav img {
+	width: 40px;
+	margin: 1rem;
 }
 
 main {
@@ -76,4 +94,39 @@ main {
 .settings {
 	grid-area: settings;
 	background-color: #eee;
+}
+
+/*---header---*/
+
+.your-app {
+	font-size: 1.5rem;
+	padding-left: 1rem;
+}
+
+.header-right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+}
+
+.bell-icon {
+	margin: 1em auto;
+	padding-right: 1em;
+	padding-top: .5em;
+	width: 1.5rem;
+}
+
+.user-name {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-left: 2px solid gray;
+	width: 150px;
+	padding: 0 1rem;
+}
+
+.profile-pic {
+	width: 40px;
+	border-radius: 50%;
 }
