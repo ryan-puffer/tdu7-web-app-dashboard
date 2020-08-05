@@ -1,3 +1,5 @@
+/*-----base-----*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,13 +7,19 @@
 
 body {
 	font-family: 'Raleway', sans-serif;
+	-webkit-font-feature-settings: "lnum" 1;
+	-moz-font-feature-settings: "lnum" 1;
+	font-feature-settings: "lnum" 1;
 	font-size: 62.5%;
 }
+
+/*-----grid layout-----*/
 
 .grid-container {
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-rows: 80px 80px auto;
+	grid-gap: 0px;
 	/*prettier-ignore*/
 	grid-template-areas: 
         "header" 
@@ -21,7 +29,7 @@ body {
 
 header {
 	grid-area: header;
-	background-color: blueviolet;
+	background-color: #7d4a95;
 	font-weight: 200;
 	color: white;
 	display: flex;
@@ -34,7 +42,7 @@ header {
 
 nav {
 	grid-area: nav;
-	background-color: chartreuse;
+	background-color: #533180;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -51,10 +59,11 @@ nav img {
 
 main {
 	grid-area: main;
-	background-color: coral;
+	background-color: #fefefe;
 	display: grid;
-	grid-template-rows: repeat(8, minmax(300px, 1fr));
+	grid-template-rows: repeat(8, minmax(300px, auto));
 	grid-template-columns: 1fr;
+	grid-gap: 0px;
 	/*prettier-ignore*/
 	grid-template-areas:
         "dashboard"
@@ -69,42 +78,42 @@ main {
 
 .dashboard {
 	grid-area: dashboard;
-	background-color: #eee;
+	border-bottom: .5px solid lightgray;
 }
 
 .traffic {
 	grid-area: traffic;
-	background-color: #fff;
+	border-bottom: .5px solid lightgray;
 }
 
 .mobile {
 	grid-area: mobile;
-	background-color: #aaa;
+	border-bottom: .5px solid lightgray;
 }
 
 .social {
 	grid-area: social;
-	background-color: #eee;
+	border-bottom: .5px solid lightgray;
 }
 
 .new-members {
 	grid-area: new-members;
-	background-color: #fff;
+	border-bottom: .5px solid lightgray;
 }
 
 .activity {
 	grid-area: activity;
-	background-color: #aaa;
+	border-bottom: .5px solid lightgray;
 }
 
 .message {
 	grid-area: message;
-	background-color: #aaa;
+	border-bottom: .5px solid lightgray;
 }
 
 .settings {
 	grid-area: settings;
-	background-color: #eee;
+	border-bottom: .5px solid lightgray;
 }
 
 /*---header---*/
@@ -142,24 +151,35 @@ main {
 	border-radius: 50%;
 }
 
-/*-----social stats-----*/
-.social {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+/*-----widget-----*/
+
+.widget {
 	position: relative;
 }
 
-.social h2 {
+.widget-heading {
+	font-weight: 400;
+	color: gray;
 	position: absolute;
-	top: 10%;
-	left: 5%;
+	top: 25px;
+	left: 25px;
+}
+
+/*-----social stats-----*/
+.social {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
+	padding: 5rem 0;
 }
 
 .social-box {
-	border: 2px solid gray;
-	height: 35%;
-	width: 25%;
+	border: .5px solid lightgray;
+	margin: 1rem;
+	height: 200px;
+	width: 75%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -168,17 +188,28 @@ main {
 
 .social-icon {
 	width: 20%;
-	margin: 1rem;
+	/* background-color: blue;
+	padding: 1rem;
+	border-radius: 50%; */
 }
 
-.social-icon img {
-	background-color: darkblue;
-	border-radius: 50%;
-	width: 40px;
-	color: white;
+/* .social-icon svg {
+	transform: translateY(5px);
+} */
+
+.social-text {
+	font-size: 1rem;
+	font-weight: bold;
+	color: lavender;
+}
+
+.count {
+	font-size: 2.5rem;
+	font-weight: 200;
 }
 
 /*-----media queries-----*/
+
 @media (min-width: 768px) {
 	.grid-container {
 		display: grid;
@@ -202,7 +233,6 @@ main {
 
 	main {
 		grid-area: main;
-		background-color: coral;
 		display: grid;
 		grid-template-rows: repeat(5, minmax(400px, 1fr));
 		grid-template-columns: 1fr 1fr;
@@ -213,5 +243,30 @@ main {
             "social social"
             "new-members activity"
             "message settings";
+	}
+
+	.mobile {
+		border-left: .5px solid lightgray;
+	}
+
+	.activity {
+		border-left: .5px solid lightgray;
+	}
+
+	.settings {
+		border-left: .5px solid lightgray;
+	}
+
+	.social {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		position: relative;
+	}
+
+	.social-box {
+		width: 30%;
+		height: 150px;
 	}
 }
