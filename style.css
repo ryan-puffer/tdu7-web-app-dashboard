@@ -197,12 +197,17 @@ main {
 .social-text {
 	font-size: 1rem;
 	font-weight: bold;
-	color: lavender;
+}
+
+.social-text p:first-child {
+	color: #7d4a95;
 }
 
 .count {
 	font-size: 2.5rem;
 	font-weight: 200;
+	color: gray;
+	margin-top: -5px;
 }
 
 /*-----media queries-----*/
