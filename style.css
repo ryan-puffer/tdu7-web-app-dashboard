@@ -188,14 +188,11 @@ main {
 
 .social-icon {
 	width: 20%;
-	/* background-color: blue;
+	/* background-color: blue; */
 	padding: 1rem;
-	border-radius: 50%; */
+	fill: white;
+	/* border-radius: 50%;  */
 }
-
-/* .social-icon svg {
-	transform: translateY(5px);
-} */
 
 .social-text {
 	font-size: 1rem;
