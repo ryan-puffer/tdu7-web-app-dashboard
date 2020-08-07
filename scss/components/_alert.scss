@@ -1,0 +1,29 @@
+.alert-banner {
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: rgba(green, .25);
+	height: 25px;
+	margin: 0 25px;
+	border: 2px solid rgb(15, 206, 15);
+	border-radius: 5px;
+}
+
+.alert {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.alert-banner-close {
+	width: 10px;
+	height: 10px;
+	margin-top: -8px;
+	cursor: pointer;
+	font-weight: 400;
+	font-size: 1rem;
+	z-index: 100;
+}

@@ -30,7 +30,7 @@
 	margin: 1em auto;
 	padding-right: 1em;
 	padding-top: .5em;
-	width: 1.5rem;
+	width: 2.5rem;
 }
 
 .user-name {
@@ -38,7 +38,7 @@
 	align-items: center;
 	justify-content: space-around;
 	border-left: 2px solid gray;
-	width: 150px;
+	width: 200px;
 	padding: 0 1rem;
 }
 
@@ -50,13 +50,14 @@
 /*-----main-header-----*/
 .main-header {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	height: 80px;
+	height: 100px;
 }
 
 .main-header-search {
 	display: flex;
-	width: 75%;
+	width: 65%;
 	margin-left: auto;
 	justify-content: flex-end;
 	align-items: center;
@@ -67,10 +68,10 @@
 
 .main-header-search input {
 	height: 35px;
-	width: 40%;
+	width: 100%;
 	border: 1px solid lightgray;
 	border-radius: 5px;
-	margin-right: 10px;
+	margin: 0 10px;
 	padding-left: 10px;
 }
 
@@ -81,6 +82,8 @@
 
 .headline {
 	font-size: 1rem;
+	margin-top: 5px;
+	width: 35%;
 }
 
 /*-----social stats-----*/
@@ -114,16 +117,22 @@
 	border-radius: 50%;
 }
 
-.svg {
-	height: 40px;
-	width: 40px;
-	transform: translate(10px, 10px);
+.svg-twit {
+	height: 35px;
+	width: 35px;
+	transform: translate(-2px, 2px);
+}
+
+.svg-goog {
+	height: 35px;
+	width: 35px;
+	transform: translateX(-2px);
 }
 
 .svg-fb {
-	height: 45px;
-	width: 45px;
-	transform: translate(5px, 5px);
+	height: 40px;
+	width: 40px;
+	transform: translate(-4px, -4px);
 }
 
 .fill-white {

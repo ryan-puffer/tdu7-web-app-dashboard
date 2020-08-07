@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -56,7 +57,7 @@ main {
   grid-area: main;
   background-color: #fefefe;
   display: grid;
-  grid-template-rows: repeat(9, minmax(300px, auto));
+  grid-template-rows: 80px repeat(8, minmax(300px, auto));
   grid-template-columns: 1fr;
   grid-gap: 0px;
   /*prettier-ignore*/
@@ -107,6 +108,11 @@ main {
   border-bottom: 0.5px solid lightgray;
 }
 
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
 /*-----widget-----*/
 .widget {
   position: relative;
@@ -137,7 +143,7 @@ main {
   margin: 1em auto;
   padding-right: 1em;
   padding-top: 0.5em;
-  width: 1.5rem;
+  width: 2.5rem;
 }
 
 .user-name {
@@ -145,7 +151,7 @@ main {
   align-items: center;
   justify-content: space-around;
   border-left: 2px solid gray;
-  width: 150px;
+  width: 200px;
   padding: 0 1rem;
 }
 
@@ -157,13 +163,14 @@ main {
 /*-----main-header-----*/
 .main-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  height: 80px;
+  height: 100px;
 }
 
 .main-header-search {
   display: flex;
-  width: 75%;
+  width: 65%;
   margin-left: auto;
   justify-content: flex-end;
   align-items: center;
@@ -174,10 +181,10 @@ main {
 
 .main-header-search input {
   height: 35px;
-  width: 40%;
+  width: 100%;
   border: 1px solid lightgray;
   border-radius: 5px;
-  margin-right: 10px;
+  margin: 0 10px;
   padding-left: 10px;
 }
 
@@ -188,6 +195,8 @@ main {
 
 .headline {
   font-size: 1rem;
+  margin-top: 5px;
+  width: 35%;
 }
 
 /*-----social stats-----*/
@@ -221,16 +230,22 @@ main {
   border-radius: 50%;
 }
 
-.svg {
-  height: 40px;
-  width: 40px;
-  transform: translate(10px, 10px);
+.svg-twit {
+  height: 35px;
+  width: 35px;
+  transform: translate(-2px, 2px);
+}
+
+.svg-goog {
+  height: 35px;
+  width: 35px;
+  transform: translateX(-2px);
 }
 
 .svg-fb {
-  height: 45px;
-  width: 45px;
-  transform: translate(5px, 5px);
+  height: 40px;
+  width: 40px;
+  transform: translate(-4px, -4px);
 }
 
 .fill-white {
@@ -276,10 +291,14 @@ nav {
   main {
     grid-area: main;
     display: grid;
-    grid-template-rows: repeat(6, minmax(400px, 1fr));
+    grid-template-rows: 80px repeat(5, minmax(400px, 1fr));
     grid-template-columns: 1fr 1fr;
     /*prettier-ignore*/
     grid-template-areas: "main-header main-header" "dashboard dashboard" "traffic mobile" "social social" "new-members activity" "message settings";
+  }
+
+  .main-header-search input {
+    width: 40%;
   }
 
   .mobile {
@@ -329,17 +348,49 @@ nav {
     padding: 0.75;
   }
 
-  .svg {
+  .svg-twit {
     height: 55px;
     width: 55px;
-    transform: translate(10px, 10px);
+  }
+
+  .svg-goog {
+    height: 55px;
+    width: 55px;
   }
 
   .svg-fb {
     height: 60px;
     width: 60px;
-    transform: translate(5px, 5px);
   }
+}
+.alert-banner {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 128, 0, 0.25);
+  height: 25px;
+  margin: 0 25px;
+  border: 2px solid #0fce0f;
+  border-radius: 5px;
+}
+
+.alert {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert-banner-close {
+  width: 10px;
+  height: 10px;
+  margin-top: -8px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem;
+  z-index: 100;
 }
 
 /*# sourceMappingURL=main.css.map */
