@@ -1,0 +1,345 @@
+/*-----base-----*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  -webkit-font-feature-settings: "lnum" 1;
+  -moz-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+  font-size: 62.5%;
+}
+
+/*-----grid layout-----*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 80px 80px auto;
+  grid-gap: 0px;
+  /*prettier-ignore*/
+  grid-template-areas: "header" "nav" "main";
+}
+
+header {
+  grid-area: header;
+  background-color: #7d4a95;
+  font-weight: 200;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #533180;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 80px;
+  z-index: 100;
+}
+
+nav img {
+  width: 40px;
+  margin: 1rem;
+}
+
+main {
+  grid-area: main;
+  background-color: #fefefe;
+  display: grid;
+  grid-template-rows: repeat(9, minmax(300px, auto));
+  grid-template-columns: 1fr;
+  grid-gap: 0px;
+  /*prettier-ignore*/
+  grid-template-areas: "main-header" "dashboard" "traffic" "mobile" "social" "new-members" "activity" "message" "settings";
+}
+
+.main-header {
+  grid-area: main-header;
+}
+
+.dashboard {
+  grid-area: dashboard;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.traffic {
+  grid-area: traffic;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.mobile {
+  grid-area: mobile;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.social {
+  grid-area: social;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.new-members {
+  grid-area: new-members;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.activity {
+  grid-area: activity;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.message {
+  grid-area: message;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.settings {
+  grid-area: settings;
+  border-bottom: 0.5px solid lightgray;
+}
+
+/*-----widget-----*/
+.widget {
+  position: relative;
+}
+
+.widget-heading {
+  font-weight: 400;
+  color: gray;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+/*---header---*/
+.your-app {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.bell-icon {
+  margin: 1em auto;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  width: 1.5rem;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-left: 2px solid gray;
+  width: 150px;
+  padding: 0 1rem;
+}
+
+.profile-pic {
+  width: 40px;
+  border-radius: 50%;
+}
+
+/*-----main-header-----*/
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.main-header-search {
+  display: flex;
+  width: 75%;
+  margin-left: auto;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #eee;
+  border-left: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.main-header-search input {
+  height: 35px;
+  width: 40%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+.main-header-search input::placeholder {
+  font-size: 1rem;
+  color: #eee;
+}
+
+.headline {
+  font-size: 1rem;
+}
+
+/*-----social stats-----*/
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  padding: 5rem 0;
+}
+
+.social-box {
+  border: 0.5px solid lightgray;
+  background-color: #eee;
+  margin: 1rem;
+  height: 125px;
+  width: 75%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.social-icon {
+  width: 55px;
+  height: 55px;
+  background-color: blue;
+  padding: 0.75rem;
+  margin: 0px 20px;
+  border-radius: 50%;
+}
+
+.svg {
+  height: 40px;
+  width: 40px;
+  transform: translate(10px, 10px);
+}
+
+.svg-fb {
+  height: 45px;
+  width: 45px;
+  transform: translate(5px, 5px);
+}
+
+.fill-white {
+  fill: white;
+}
+
+.social-text {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.social-text p:first-child {
+  color: #7d4a95;
+}
+
+.count {
+  font-size: 2rem;
+  font-weight: 200;
+  color: gray;
+  margin-top: -5px;
+}
+
+/*-----media queries-----*/
+@media (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 90px auto;
+    grid-template-rows: 80px auto;
+    /*prettier-ignore*/
+    grid-template-areas: "header header" "nav main";
+  }
+
+  header,
+nav {
+    position: static;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: repeat(6, minmax(400px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    /*prettier-ignore*/
+    grid-template-areas: "main-header main-header" "dashboard dashboard" "traffic mobile" "social social" "new-members activity" "message settings";
+  }
+
+  .mobile {
+    border-left: 0.5px solid lightgray;
+  }
+
+  .activity {
+    border-left: 0.5px solid lightgray;
+  }
+
+  .settings {
+    border-left: 0.5px solid lightgray;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+  }
+
+  .social-box {
+    width: 30%;
+    height: 130px;
+  }
+
+  .count {
+    font-size: 2rem;
+    font-weight: 200;
+    color: gray;
+    margin-top: -5px;
+  }
+}
+@media (min-width: 1024px) {
+  .count {
+    font-size: 3rem;
+  }
+
+  .social-text {
+    font-size: 1.25rem;
+  }
+
+  .social-icon {
+    height: 75px;
+    width: 75px;
+    padding: 0.75;
+  }
+
+  .svg {
+    height: 55px;
+    width: 55px;
+    transform: translate(10px, 10px);
+  }
+
+  .svg-fb {
+    height: 60px;
+    width: 60px;
+    transform: translate(5px, 5px);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

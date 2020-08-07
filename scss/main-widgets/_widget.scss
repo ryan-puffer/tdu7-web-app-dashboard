@@ -1,0 +1,147 @@
+/*-----widget-----*/
+
+.widget {
+	position: relative;
+}
+
+.widget-heading {
+	font-weight: 400;
+	color: gray;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+}
+
+/*---header---*/
+
+.your-app {
+	font-size: 1.5rem;
+	padding-left: 1rem;
+}
+
+.header-right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+}
+
+.bell-icon {
+	margin: 1em auto;
+	padding-right: 1em;
+	padding-top: .5em;
+	width: 1.5rem;
+}
+
+.user-name {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-left: 2px solid gray;
+	width: 150px;
+	padding: 0 1rem;
+}
+
+.profile-pic {
+	width: 40px;
+	border-radius: 50%;
+}
+
+/*-----main-header-----*/
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+}
+
+.main-header-search {
+	display: flex;
+	width: 75%;
+	margin-left: auto;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: #eee;
+	border-left: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+}
+
+.main-header-search input {
+	height: 35px;
+	width: 40%;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-right: 10px;
+	padding-left: 10px;
+}
+
+.main-header-search input::placeholder {
+	font-size: 1rem;
+	color: #eee;
+}
+
+.headline {
+	font-size: 1rem;
+}
+
+/*-----social stats-----*/
+.social {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
+	padding: 5rem 0;
+}
+
+.social-box {
+	border: .5px solid lightgray;
+	background-color: #eee;
+	margin: 1rem;
+	height: 125px;
+	width: 75%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.social-icon {
+	width: 55px;
+	height: 55px;
+	background-color: blue;
+	padding: .75rem;
+	margin: 0px 20px;
+	border-radius: 50%;
+}
+
+.svg {
+	height: 40px;
+	width: 40px;
+	transform: translate(10px, 10px);
+}
+
+.svg-fb {
+	height: 45px;
+	width: 45px;
+	transform: translate(5px, 5px);
+}
+
+.fill-white {
+	fill: white;
+}
+
+.social-text {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.social-text p:first-child {
+	color: #7d4a95;
+}
+
+.count {
+	font-size: 2rem;
+	font-weight: 200;
+	color: gray;
+	margin-top: -5px;
+}

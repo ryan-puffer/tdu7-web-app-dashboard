@@ -1,0 +1,107 @@
+/*-----grid layout-----*/
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 80px 80px auto;
+	grid-gap: 0px;
+	/*prettier-ignore*/
+	grid-template-areas: 
+        "header" 
+        "nav"
+        "main";
+}
+
+header {
+	grid-area: header;
+	background-color: #7d4a95;
+	font-weight: 200;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0px;
+	z-index: 100;
+}
+
+nav {
+	grid-area: nav;
+	background-color: #533180;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: sticky;
+	top: 80px;
+	z-index: 100;
+}
+
+nav img {
+	width: 40px;
+	margin: 1rem;
+}
+
+main {
+	grid-area: main;
+	background-color: #fefefe;
+	display: grid;
+	grid-template-rows: repeat(9, minmax(300px, auto));
+	grid-template-columns: 1fr;
+	grid-gap: 0px;
+	/*prettier-ignore*/
+	grid-template-areas:
+        "main-header"
+        "dashboard"
+        "traffic"
+        "mobile"
+        "social"
+        "new-members"
+        "activity"
+        "message"
+        "settings";
+}
+
+.main-header {
+	grid-area: main-header;
+}
+
+.dashboard {
+	grid-area: dashboard;
+	border-bottom: .5px solid lightgray;
+}
+
+.traffic {
+	grid-area: traffic;
+	border-bottom: .5px solid lightgray;
+}
+
+.mobile {
+	grid-area: mobile;
+	border-bottom: .5px solid lightgray;
+}
+
+.social {
+	grid-area: social;
+	border-bottom: .5px solid lightgray;
+}
+
+.new-members {
+	grid-area: new-members;
+	border-bottom: .5px solid lightgray;
+}
+
+.activity {
+	grid-area: activity;
+	border-bottom: .5px solid lightgray;
+}
+
+.message {
+	grid-area: message;
+	border-bottom: .5px solid lightgray;
+}
+
+.settings {
+	grid-area: settings;
+	border-bottom: .5px solid lightgray;
+}
