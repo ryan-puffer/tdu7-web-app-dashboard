@@ -1,1 +1,14 @@
-
+.btn {
+	height: 2.5rem;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 .5rem 1rem rgba(black, .25);
+	&--primary {
+		background-color: #7d4a95;
+		color: white;
+		transition: .2s all;
+		&:hover {
+			background-color: darken(#7d4a95, 10%);
+		}
+	}
+}

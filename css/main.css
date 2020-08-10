@@ -194,8 +194,10 @@ main {
 }
 
 .headline {
-  font-size: 1rem;
-  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-top: -8px;
   width: 35%;
 }
 
@@ -266,6 +268,68 @@ main {
   font-weight: 200;
   color: gray;
   margin-top: -5px;
+}
+
+/*-----message users-----*/
+.message-user-search {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 2rem;
+}
+.message-user-search input {
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 1rem;
+}
+.message-user-search textarea {
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 1rem;
+}
+
+/*-----new members-----*/
+.member-container {
+  padding: 4rem 2rem;
+}
+
+.member {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-top: 1rem;
+}
+.member:not(:last-child) {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 1rem;
+}
+.member h4 {
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.member-image {
+  margin-right: 1rem;
+}
+
+.email {
+  letter-spacing: 0.5px;
+  color: #7d4a95;
+}
+
+.username {
+  font-size: 0.75rem;
+}
+
+.date {
+  margin-left: auto;
+  font-size: 0.7rem;
+}
+
+.fa-chevron-right {
+  font-size: 1rem;
 }
 
 /*-----media queries-----*/
@@ -363,6 +427,21 @@ nav {
     width: 60px;
   }
 }
+.btn {
+  height: 2.5rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+.btn--primary {
+  background-color: #7d4a95;
+  color: white;
+  transition: 0.2s all;
+}
+.btn--primary:hover {
+  background-color: #603973;
+}
+
 .alert-banner {
   width: 90%;
   display: flex;

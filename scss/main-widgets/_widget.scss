@@ -81,8 +81,10 @@
 }
 
 .headline {
-	font-size: 1rem;
-	margin-top: 5px;
+	display: flex;
+	align-items: center;
+	font-size: 1.25rem;
+	margin-top: -8px;
 	width: 35%;
 }
 
@@ -153,4 +155,67 @@
 	font-weight: 200;
 	color: gray;
 	margin-top: -5px;
+}
+
+/*-----message users-----*/
+
+.message-user-search {
+	display: flex;
+	flex-direction: column;
+	margin: 4rem 2rem;
+	input {
+		height: 2.5rem;
+		margin-bottom: 1rem;
+		border-radius: 5px;
+		border: 1px solid lightgray;
+		padding: 1rem;
+	}
+	textarea {
+		margin-bottom: 1rem;
+		border-radius: 5px;
+		border: 1px solid lightgray;
+		padding: 1rem;
+	}
+}
+
+/*-----new members-----*/
+.member-container {
+	padding: 4rem 2rem;
+}
+
+.member {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding-top: 1rem;
+	&:not(:last-child) {
+		border-bottom: 1px solid lightgray;
+		padding-bottom: 1rem;
+	}
+	h4 {
+		color: gray;
+		letter-spacing: 1px;
+	}
+}
+
+.member-image {
+	margin-right: 1rem;
+}
+
+.email {
+	letter-spacing: .5px;
+	color: #7d4a95;
+}
+
+.username {
+	font-size: .75rem;
+}
+
+.date {
+	margin-left: auto;
+	font-size: .7rem;
+}
+
+.fa-chevron-right {
+	font-size: 1rem;
 }
