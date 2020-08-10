@@ -179,7 +179,7 @@
 }
 
 /*-----new members-----*/
-.member-container {
+.container {
 	padding: 4rem 2rem;
 }
 
@@ -218,4 +218,36 @@
 
 .fa-chevron-right {
 	font-size: 1rem;
+}
+
+/*-----settings-----*/
+
+.option {
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	justify-content: space-between;
+	width: 60%;
+	p {
+		margin-right: 1rem;
+		font-size: .75rem;
+	}
+}
+
+select {
+	padding: 1rem;
+	margin: 1rem;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+.settings-buttons {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 3rem;
+	button {
+		width: 50%;
+		margin: 0 1rem;
+	}
 }

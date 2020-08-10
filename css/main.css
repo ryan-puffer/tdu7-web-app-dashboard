@@ -291,7 +291,7 @@ main {
 }
 
 /*-----new members-----*/
-.member-container {
+.container {
   padding: 4rem 2rem;
 }
 
@@ -330,6 +330,37 @@ main {
 
 .fa-chevron-right {
   font-size: 1rem;
+}
+
+/*-----settings-----*/
+.option {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+  width: 60%;
+}
+.option p {
+  margin-right: 1rem;
+  font-size: 0.75rem;
+}
+
+select {
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.settings-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.settings-buttons button {
+  width: 50%;
+  margin: 0 1rem;
 }
 
 /*-----media queries-----*/
@@ -440,6 +471,14 @@ nav {
 }
 .btn--primary:hover {
   background-color: #603973;
+}
+.btn--gray {
+  background-color: gray;
+  color: white;
+  transition: 0.2s all;
+}
+.btn--gray:hover {
+  background-color: #676767;
 }
 
 .alert-banner {

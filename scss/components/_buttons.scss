@@ -11,4 +11,12 @@
 			background-color: darken(#7d4a95, 10%);
 		}
 	}
+	&--gray {
+		background-color: gray;
+		color: white;
+		transition: .2s all;
+		&:hover {
+			background-color: darken(gray, 10%);
+		}
+	}
 }
