@@ -88,6 +88,38 @@
 	width: 35%;
 }
 
+/*-----traffic-----*/
+.widget-container-full {
+	position: relative;
+	height: 95%;
+	padding-top: 3rem;
+}
+
+.traffic-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 2rem 0 2rem;
+}
+
+#traffic-nav {
+	display: flex;
+	list-style-type: none;
+	li {
+		margin: 0 1rem;
+		font-size: .75rem;
+		.active {
+			background-color: lightgreen;
+			border: 1px solid green;
+			border-radius: 25px;
+		}
+	}
+}
+
+.traffic-nav-link {
+	padding: .5rem;
+	cursor: pointer;
+}
+
 /*-----social stats-----*/
 .social {
 	display: flex;

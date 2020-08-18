@@ -39,10 +39,32 @@
                 
                 <div class="alert" id="alert"></div>
             </div>
-            <div class="alert" id="alert"></div>
-            <div class="dashboard widget"><h2 class="widget-heading">TRAFFIC</h2></div>
-            <div class="traffic widget"><h2 class="widget-heading">DAILY TRAFFIC</h2></div>
-            <div class="mobile widget"><h2 class="widget-heading">MOBILE USERS</h2></div>
+            <div class="dashboard widget">
+                <div class="traffic-header">
+                <h2>TRAFFIC</h2>
+                <ul id="traffic-nav">
+                    <li class="traffic-nav-link active" id="hourlyTraffic">Hourly</li>
+                    <li class="traffic-nav-link" id="dailyTraffic">Daily</li>
+                    <li class="traffic-nav-link" id="weeklyTraffic">Weekly</li>
+                    <li class="traffic-nav-link" id="monthlyTraffic">Monthly</li>
+                </ul>
+            </div>
+            <div class="widget-container-full">
+                <canvas id="traffic-chart"></canvas>
+            </div>
+            </div>
+            <div class="traffic widget">
+                <h2 class="widget-heading">DAILY TRAFFIC</h2>
+                <div class="widget-container-full">
+                    <canvas id="daily-traffic-chart"></canvas>
+                </div>
+            </div>
+            <div class="mobile widget">
+                <h2 class="widget-heading">MOBILE USERS</h2>
+                <div class="widget-container-full">
+                    <canvas id="mobile-users-chart"></canvas>
+                </div>
+            </div>
             <div class="social widget"><h2 class="widget-heading">SOCIAL STATS</h2>
                 <div class="social-box">
                     <div class="social-icon">
