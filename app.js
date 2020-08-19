@@ -139,3 +139,6 @@ const mobileUsersChart = new Chart(muc, {
 		}
 	}
 });
+
+//bell notifications
+const bell = document.querySelector('#bell-icon');

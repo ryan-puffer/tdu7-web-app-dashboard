@@ -32,3 +32,17 @@
 	animation: ring 1s;
 	cursor: pointer;
 }
+
+.bell-icon {
+	position: relative;
+}
+
+.bell-dot {
+	background-color: red;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
