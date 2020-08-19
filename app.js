@@ -48,16 +48,18 @@ const trafficChart = new Chart(ctx, {
 		datasets: [
 			{
 				label: 'Stuff',
-				backgroundColor: 'transparent',
+				backgroundColor: 'rgba(115,119,191, 0.1)',
 				lineTension: 0,
-				borderColor: 'rgb(255, 99, 132)',
+				pointRadius: 6,
+				pointBackgroundColor: 'white',
+				pointBorderWidth: 3,
+				borderColor: 'rgb(115,119,191)',
 				data: hourlyData
 			}
 		]
 	},
 	options: {
 		responsive: true,
-		maintainAspectRatio: false,
 		legend: {
 			display: false
 		}
@@ -102,14 +104,13 @@ const dailyChart = new Chart(dtc, {
 		datasets: [
 			{
 				barPercentage: 0.5,
-				backgroundColor: '#7d4a95',
+				backgroundColor: 'rgb(77, 76, 114)',
 				data: [ 75, 100, 175, 125, 225, 200, 100 ]
 			}
 		]
 	},
 	options: {
 		responsive: true,
-		maintainAspectRatio: false,
 		legend: {
 			display: false
 		}

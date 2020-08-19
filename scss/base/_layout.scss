@@ -2,7 +2,7 @@
 
 .grid-container {
 	display: grid;
-	grid-template-columns: auto;
+	grid-template-columns: 1fr;
 	grid-template-rows: 80px 80px auto;
 	grid-gap: 0px;
 	/*prettier-ignore*/
@@ -14,7 +14,7 @@
 
 header {
 	grid-area: header;
-	background-color: #7d4a95;
+	background-color: $color-primary;
 	font-weight: 200;
 	color: white;
 	display: flex;
@@ -27,7 +27,7 @@ header {
 
 nav {
 	grid-area: nav;
-	background-color: #533180;
+	background-color: $color-secondary;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -69,16 +69,19 @@ main {
 .dashboard {
 	grid-area: dashboard;
 	border-bottom: .5px solid lightgray;
+	padding: 1rem;
 }
 
 .traffic {
 	grid-area: traffic;
 	border-bottom: .5px solid lightgray;
+	padding: 1rem;
 }
 
 .mobile {
 	grid-area: mobile;
 	border-bottom: .5px solid lightgray;
+	padding: 1rem;
 }
 
 .social {

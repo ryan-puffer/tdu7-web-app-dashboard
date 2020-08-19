@@ -4,11 +4,11 @@
 	border-radius: 5px;
 	box-shadow: 0 .5rem 1rem rgba(black, .25);
 	&--primary {
-		background-color: #7d4a95;
+		background-color: $color-primary;
 		color: white;
 		transition: .2s all;
 		&:hover {
-			background-color: darken(#7d4a95, 10%);
+			background-color: darken($color-primary, 10%);
 		}
 	}
 	&--gray {
@@ -22,8 +22,8 @@
 }
 
 .active {
-	background-color: #7d4a95;
+	background-color: $color-primary;
 	color: white;
 	padding: .5rem;
-	border-radius: 5px;
+	border-radius: 50px;
 }

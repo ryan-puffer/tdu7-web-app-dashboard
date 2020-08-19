@@ -16,7 +16,7 @@ body {
 /*-----grid layout-----*/
 .grid-container {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-template-rows: 80px 80px auto;
   grid-gap: 0px;
   /*prettier-ignore*/
@@ -25,7 +25,7 @@ body {
 
 header {
   grid-area: header;
-  background-color: #7d4a95;
+  background-color: #7377bf;
   font-weight: 200;
   color: white;
   display: flex;
@@ -38,7 +38,7 @@ header {
 
 nav {
   grid-area: nav;
-  background-color: #533180;
+  background-color: #4d4c72;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -71,16 +71,19 @@ main {
 .dashboard {
   grid-area: dashboard;
   border-bottom: 0.5px solid lightgray;
+  padding: 1rem;
 }
 
 .traffic {
   grid-area: traffic;
   border-bottom: 0.5px solid lightgray;
+  padding: 1rem;
 }
 
 .mobile {
   grid-area: mobile;
   border-bottom: 0.5px solid lightgray;
+  padding: 1rem;
 }
 
 .social {
@@ -113,6 +116,107 @@ main {
   height: 0;
 }
 
+/*-----media queries-----*/
+@media (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 90px auto;
+    grid-template-rows: 80px auto;
+    /*prettier-ignore*/
+    grid-template-areas: "header header" "nav main";
+  }
+
+  header,
+nav {
+    position: static;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 80px 95vh repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    /*prettier-ignore*/
+    grid-template-areas: "main-header main-header" "dashboard dashboard" "traffic mobile" "social social" "new-members activity" "message settings";
+  }
+
+  .main-header-search input {
+    width: 40%;
+  }
+
+  .traffic {
+    padding: 1rem;
+  }
+
+  .mobile {
+    border-left: 0.5px solid lightgray;
+    padding: 1rem;
+  }
+
+  .activity {
+    border-left: 0.5px solid lightgray;
+  }
+
+  .settings {
+    border-left: 0.5px solid lightgray;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+  }
+
+  .social-box {
+    width: 30%;
+    height: 130px;
+    border: 3px solid red;
+  }
+
+  .count {
+    font-size: 2rem;
+    font-weight: 200;
+    color: gray;
+    margin-top: -5px;
+  }
+}
+@media (min-width: 1024px) {
+  .count {
+    font-size: 3rem;
+  }
+
+  .social-text {
+    font-size: 1.25rem;
+  }
+
+  .social-icon {
+    height: 75px;
+    width: 75px;
+    padding: 0.75;
+  }
+
+  .svg-twit {
+    height: 55px;
+    width: 55px;
+  }
+
+  .svg-goog {
+    height: 55px;
+    width: 55px;
+  }
+
+  .svg-fb {
+    height: 60px;
+    width: 60px;
+  }
+}
 /*-----widget-----*/
 .widget {
   position: relative;
@@ -204,7 +308,6 @@ main {
 /*-----traffic-----*/
 .widget-container-full {
   position: relative;
-  height: 95%;
   padding-top: 3rem;
 }
 
@@ -222,11 +325,6 @@ main {
   margin: 0 1rem;
   font-size: 0.75rem;
 }
-#traffic-nav li .active {
-  background-color: lightgreen;
-  border: 1px solid green;
-  border-radius: 25px;
-}
 
 .traffic-nav-link {
   padding: 0.5rem;
@@ -237,7 +335,6 @@ main {
 .social {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
   position: relative;
   padding: 5rem 0;
@@ -258,7 +355,7 @@ main {
 .social-icon {
   width: 55px;
   height: 55px;
-  background-color: blue;
+  background-color: #4d4c72;
   padding: 0.75rem;
   margin: 0px 20px;
   border-radius: 50%;
@@ -292,7 +389,7 @@ main {
 }
 
 .social-text p:first-child {
-  color: #7d4a95;
+  color: #7377bf;
 }
 
 .count {
@@ -348,7 +445,7 @@ main {
 
 .email {
   letter-spacing: 0.5px;
-  color: #7d4a95;
+  color: #7377bf;
 }
 
 .username {
@@ -395,101 +492,6 @@ select {
   margin: 0 1rem;
 }
 
-/*-----media queries-----*/
-@media (min-width: 768px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: 90px auto;
-    grid-template-rows: 80px auto;
-    /*prettier-ignore*/
-    grid-template-areas: "header header" "nav main";
-  }
-
-  header,
-nav {
-    position: static;
-  }
-
-  nav {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  main {
-    grid-area: main;
-    display: grid;
-    grid-template-rows: 80px repeat(5, minmax(400px, 1fr));
-    grid-template-columns: 1fr 1fr;
-    /*prettier-ignore*/
-    grid-template-areas: "main-header main-header" "dashboard dashboard" "traffic mobile" "social social" "new-members activity" "message settings";
-  }
-
-  .main-header-search input {
-    width: 40%;
-  }
-
-  .mobile {
-    border-left: 0.5px solid lightgray;
-  }
-
-  .activity {
-    border-left: 0.5px solid lightgray;
-  }
-
-  .settings {
-    border-left: 0.5px solid lightgray;
-  }
-
-  .social {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-  }
-
-  .social-box {
-    width: 30%;
-    height: 130px;
-  }
-
-  .count {
-    font-size: 2rem;
-    font-weight: 200;
-    color: gray;
-    margin-top: -5px;
-  }
-}
-@media (min-width: 1024px) {
-  .count {
-    font-size: 3rem;
-  }
-
-  .social-text {
-    font-size: 1.25rem;
-  }
-
-  .social-icon {
-    height: 75px;
-    width: 75px;
-    padding: 0.75;
-  }
-
-  .svg-twit {
-    height: 55px;
-    width: 55px;
-  }
-
-  .svg-goog {
-    height: 55px;
-    width: 55px;
-  }
-
-  .svg-fb {
-    height: 60px;
-    width: 60px;
-  }
-}
 .btn {
   height: 2.5rem;
   border: none;
@@ -497,12 +499,12 @@ nav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 .btn--primary {
-  background-color: #7d4a95;
+  background-color: #7377bf;
   color: white;
   transition: 0.2s all;
 }
 .btn--primary:hover {
-  background-color: #603973;
+  background-color: #5055af;
 }
 .btn--gray {
   background-color: gray;
@@ -514,10 +516,10 @@ nav {
 }
 
 .active {
-  background-color: #7d4a95;
+  background-color: #7377bf;
   color: white;
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 
 .alert-banner {
@@ -526,10 +528,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: rgba(0, 128, 0, 0.25);
+  background-color: rgba(115, 119, 191, 0.25);
   height: 25px;
   margin: 0 25px;
-  border: 2px solid #0fce0f;
+  border: 2px solid #7377bf;
   border-radius: 5px;
 }
 
@@ -548,6 +550,44 @@ nav {
   font-weight: 400;
   font-size: 1rem;
   z-index: 100;
+}
+
+.bell-notification:hover {
+  animation: ring 1s;
+  cursor: pointer;
+}
+
+@keyframes ring {
+  10% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: rotate(-5deg) scale(1.1);
+  }
+  30% {
+    transform: rotate(5deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(-5deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(5deg) scale(1.1);
+  }
+  60% {
+    transform: rotate(-5deg) scale(1.1);
+  }
+  70% {
+    transform: rotate(5deg) scale(1.1);
+  }
+  80% {
+    transform: rotate(-5deg) scale(1.1);
+  }
+  90% {
+    transform: rotate(5deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

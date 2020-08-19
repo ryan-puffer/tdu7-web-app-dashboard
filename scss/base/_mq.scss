@@ -24,7 +24,7 @@
 	main {
 		grid-area: main;
 		display: grid;
-		grid-template-rows: 80px repeat(5, minmax(400px, 1fr));
+		grid-template-rows: 80px 95vh repeat(4, 1fr);
 		grid-template-columns: 1fr 1fr;
 		/*prettier-ignore*/
 		grid-template-areas:
@@ -40,8 +40,13 @@
 		width: 40%;
 	}
 
+	.traffic {
+		padding: 1rem;
+	}
+
 	.mobile {
 		border-left: .5px solid lightgray;
+		padding: 1rem;
 	}
 
 	.activity {
@@ -63,6 +68,7 @@
 	.social-box {
 		width: 30%;
 		height: 130px;
+		border: 3px solid red;
 	}
 
 	.count {

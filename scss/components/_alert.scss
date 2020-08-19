@@ -4,10 +4,10 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px;
-	background-color: rgba(green, .25);
+	background-color: rgba($color-primary, .25);
 	height: 25px;
 	margin: 0 25px;
-	border: 2px solid rgb(15, 206, 15);
+	border: 2px solid $color-primary;
 	border-radius: 5px;
 }
 
@@ -26,4 +26,9 @@
 	font-weight: 400;
 	font-size: 1rem;
 	z-index: 100;
+}
+
+.bell-notification:hover {
+	animation: ring 1s;
+	cursor: pointer;
 }
