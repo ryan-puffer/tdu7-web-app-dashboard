@@ -257,7 +257,7 @@
 .option {
 	display: flex;
 	align-items: center;
-	padding: 1rem;
+	padding-bottom: 1rem;
 	justify-content: space-between;
 	width: 60%;
 	p {
@@ -268,7 +268,7 @@
 
 select {
 	padding: 1rem;
-	margin: 1rem;
+	// margin: 1rem;
 	border: 1px solid lightgray;
 	border-radius: 5px;
 	width: 100%;
@@ -278,9 +278,9 @@ select {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	margin-top: 3rem;
+	margin-top: 7.5rem;
 	button {
 		width: 50%;
-		margin: 0 1rem;
+		margin-right: 1rem;
 	}
 }

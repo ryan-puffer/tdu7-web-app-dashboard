@@ -20,6 +20,37 @@
 		flex-direction: column;
 		justify-content: flex-start;
 	}
+}
+
+@media (min-width: 1024px) {
+	.count {
+		font-size: 3rem;
+	}
+
+	.social-text {
+		font-size: 1.25rem;
+	}
+
+	.social-icon {
+		height: 75px;
+		width: 75px;
+		padding: .75;
+	}
+
+	.svg-twit {
+		height: 55px;
+		width: 55px;
+	}
+
+	.svg-goog {
+		height: 55px;
+		width: 55px;
+	}
+
+	.svg-fb {
+		height: 60px;
+		width: 60px;
+	}
 
 	main {
 		grid-area: main;
@@ -83,36 +114,5 @@
 	.social-box {
 		width: 30%;
 		height: 130px;
-	}
-}
-
-@media (min-width: 1024px) {
-	.count {
-		font-size: 3rem;
-	}
-
-	.social-text {
-		font-size: 1.25rem;
-	}
-
-	.social-icon {
-		height: 75px;
-		width: 75px;
-		padding: .75;
-	}
-
-	.svg-twit {
-		height: 55px;
-		width: 55px;
-	}
-
-	.svg-goog {
-		height: 55px;
-		width: 55px;
-	}
-
-	.svg-fb {
-		height: 60px;
-		width: 60px;
 	}
 }
