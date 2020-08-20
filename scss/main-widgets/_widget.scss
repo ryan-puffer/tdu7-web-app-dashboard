@@ -92,6 +92,13 @@
 .widget-container-full {
 	position: relative;
 	padding-top: 3rem;
+	width: 90vw;
+}
+
+.widget-container-half {
+	position: relative;
+	padding-top: 3rem;
+	width: 90vw;
 }
 
 .traffic-header {
@@ -105,7 +112,7 @@
 	list-style-type: none;
 	li {
 		margin: 0 1rem;
-		font-size: .75rem;
+		font-size: .5rem;
 	}
 }
 
@@ -126,9 +133,9 @@
 .social-box {
 	border: .5px solid lightgray;
 	background-color: #eee;
-	margin: 1rem;
+	margin: .25rem;
 	height: 125px;
-	width: 75%;
+	width: 50%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -264,6 +271,7 @@ select {
 	margin: 1rem;
 	border: 1px solid lightgray;
 	border-radius: 5px;
+	width: 100%;
 }
 
 .settings-buttons {

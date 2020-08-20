@@ -2,7 +2,7 @@
 
 .grid-container {
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 100vw;
 	grid-template-rows: 80px 80px auto;
 	grid-gap: 0px;
 	/*prettier-ignore*/
@@ -47,7 +47,7 @@ main {
 	background-color: #fefefe;
 	display: grid;
 	grid-template-rows: 80px repeat(8, minmax(300px, auto));
-	grid-template-columns: 1fr;
+	grid-template-columns: 100vw;
 	grid-gap: 0px;
 	/*prettier-ignore*/
 	grid-template-areas:

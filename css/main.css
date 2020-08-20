@@ -16,7 +16,7 @@ body {
 /*-----grid layout-----*/
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100vw;
   grid-template-rows: 80px 80px auto;
   grid-gap: 0px;
   /*prettier-ignore*/
@@ -58,7 +58,7 @@ main {
   background-color: #fefefe;
   display: grid;
   grid-template-rows: 80px repeat(8, minmax(300px, auto));
-  grid-template-columns: 1fr;
+  grid-template-columns: 100vw;
   grid-gap: 0px;
   /*prettier-ignore*/
   grid-template-areas: "main-header" "dashboard" "traffic" "mobile" "social" "new-members" "activity" "message" "settings";
@@ -208,6 +208,13 @@ main {
 .widget-container-full {
   position: relative;
   padding-top: 3rem;
+  width: 90vw;
+}
+
+.widget-container-half {
+  position: relative;
+  padding-top: 3rem;
+  width: 90vw;
 }
 
 .traffic-header {
@@ -222,7 +229,7 @@ main {
 }
 #traffic-nav li {
   margin: 0 1rem;
-  font-size: 0.75rem;
+  font-size: 0.5rem;
 }
 
 .traffic-nav-link {
@@ -242,9 +249,9 @@ main {
 .social-box {
   border: 0.5px solid lightgray;
   background-color: #eee;
-  margin: 1rem;
+  margin: 0.25rem;
   height: 125px;
-  width: 75%;
+  width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -378,6 +385,7 @@ select {
   margin: 1rem;
   border: 1px solid lightgray;
   border-radius: 5px;
+  width: 100%;
 }
 
 .settings-buttons {
@@ -507,7 +515,7 @@ select {
   .grid-container {
     display: grid;
     grid-template-columns: 90px auto;
-    grid-template-rows: 80px auto;
+    grid-template-rows: 80px 1fr;
     /*prettier-ignore*/
     grid-template-areas: "header header" "nav main";
   }
@@ -525,7 +533,7 @@ nav {
   main {
     grid-area: main;
     display: grid;
-    grid-template-rows: 80px 95vh repeat(4, 1fr);
+    grid-template-rows: 80px repeat(5, auto);
     grid-template-columns: 1fr 1fr;
     /*prettier-ignore*/
     grid-template-areas: "main-header main-header" "dashboard dashboard" "traffic mobile" "social social" "new-members activity" "message settings";
@@ -537,6 +545,14 @@ nav {
 
   .traffic {
     padding: 1rem;
+  }
+
+  #traffic-nav li {
+    font-size: 0.75rem;
+  }
+
+  .widget-container-half {
+    width: 42vw;
   }
 
   .mobile {
@@ -552,6 +568,13 @@ nav {
     border-left: 0.5px solid lightgray;
   }
 
+  .count {
+    font-size: 2rem;
+    font-weight: 200;
+    color: gray;
+    margin-top: -5px;
+  }
+
   .social {
     display: flex;
     flex-direction: row;
@@ -563,13 +586,6 @@ nav {
   .social-box {
     width: 30%;
     height: 130px;
-  }
-
-  .count {
-    font-size: 2rem;
-    font-weight: 200;
-    color: gray;
-    margin-top: -5px;
   }
 }
 @media (min-width: 1024px) {
