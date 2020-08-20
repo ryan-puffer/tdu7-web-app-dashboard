@@ -13,6 +13,10 @@ body {
   font-size: 62.5%;
 }
 
+canvas {
+  max-width: 100%;
+}
+
 /*-----grid layout-----*/
 .grid-container {
   display: grid;
@@ -34,6 +38,7 @@ header {
   position: sticky;
   top: 0px;
   z-index: 100;
+  flex-wrap: wrap;
 }
 
 nav {
@@ -220,7 +225,17 @@ main {
 .traffic-header {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem 2rem 0 2rem;
+}
+@media (min-width: 768px) {
+  .traffic-header {
+    flex-direction: row;
+  }
+}
+.traffic-header h2 {
+  margin-right: auto;
 }
 
 #traffic-nav {
@@ -335,6 +350,7 @@ main {
   width: 100%;
   align-items: center;
   padding-top: 1rem;
+  flex-wrap: wrap;
 }
 .member:not(:last-child) {
   border-bottom: 1px solid lightgray;
@@ -511,14 +527,6 @@ select {
 }
 /*-----media queries-----*/
 @media (min-width: 768px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: 90px auto;
-    grid-template-rows: 80px 1fr;
-    /*prettier-ignore*/
-    grid-template-areas: "header header" "nav main";
-  }
-
   header,
 nav {
     position: static;
@@ -527,6 +535,14 @@ nav {
   nav {
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 90px auto;
+    grid-template-rows: 80px 1fr;
+    /*prettier-ignore*/
+    grid-template-areas: "header header" "nav main";
   }
 }
 @media (min-width: 1024px) {

@@ -1,16 +1,6 @@
 /*-----media queries-----*/
 
 @media (min-width: 768px) {
-	.grid-container {
-		display: grid;
-		grid-template-columns: 90px auto;
-		grid-template-rows: 80px 1fr;
-		/*prettier-ignore*/
-		grid-template-areas: 
-            "header header" 
-            "nav main";
-	}
-
 	header,
 	nav {
 		position: static;
@@ -19,6 +9,16 @@
 	nav {
 		flex-direction: column;
 		justify-content: flex-start;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: 90px auto;
+		grid-template-rows: 80px 1fr;
+		/*prettier-ignore*/
+		grid-template-areas: 
+            "header header" 
+            "nav main";
 	}
 }
 

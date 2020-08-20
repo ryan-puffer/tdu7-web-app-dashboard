@@ -104,7 +104,15 @@
 .traffic-header {
 	display: flex;
 	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	@media (min-width: 768px) {
+		flex-direction: row;
+	}
 	padding: 2rem 2rem 0 2rem;
+	h2 {
+		margin-right: auto;
+	}
 }
 
 #traffic-nav {
@@ -220,6 +228,7 @@
 	width: 100%;
 	align-items: center;
 	padding-top: 1rem;
+	flex-wrap: wrap;
 	&:not(:last-child) {
 		border-bottom: 1px solid lightgray;
 		padding-bottom: 1rem;
