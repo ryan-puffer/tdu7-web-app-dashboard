@@ -444,6 +444,11 @@ select {
   border-radius: 50px;
 }
 
+.switch-ios.switch-light input:checked ~ span {
+  border-color: #7377bf;
+  box-shadow: inset 0 0 0 30px #7377bf;
+}
+
 .alert-banner {
   width: 90%;
   display: flex;
