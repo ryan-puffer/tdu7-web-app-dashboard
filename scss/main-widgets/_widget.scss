@@ -228,7 +228,7 @@
 	width: 100%;
 	align-items: center;
 	padding-top: 1rem;
-	flex-wrap: wrap;
+	// flex-wrap: wrap;
 	&:not(:last-child) {
 		border-bottom: 1px solid lightgray;
 		padding-bottom: 1rem;
@@ -250,6 +250,9 @@
 
 .username {
 	font-size: .75rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 .date {

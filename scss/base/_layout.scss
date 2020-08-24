@@ -36,6 +36,12 @@ nav {
 	position: sticky;
 	top: 80px;
 	z-index: 100;
+	img {
+		transition: all .2s;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
 }
 
 nav img {
