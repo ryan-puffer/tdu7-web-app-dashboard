@@ -187,11 +187,14 @@
             </div>
             <div class="message widget">
                 <h2 class="widget-heading">MESSAGE USERS</h2>
-                <div class="message-user-search">
-                    <input type="search" id="userField" placeholder="Enter user name..." />
+                
+                <form class="message-user-search">
+                    <input type="text" id="userField" name="user-search" placeholder="Enter user name..." autocomplete="off"/>
+                    <div class="search-results"></div>
                     <textarea name="messageField" id="messageField" cols="30" rows="10" placeholder="Message"></textarea>
                     <button class="btn btn--primary" id="messageUserSubmit" type="submit">Send Message</button>
-                </div>
+                </form>
+                
             </div>
             <div class="settings widget">
                 <h2 class="widget-heading">SETTINGS</h2>

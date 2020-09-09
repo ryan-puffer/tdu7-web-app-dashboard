@@ -35,33 +35,95 @@ submit.addEventListener('click', () => {
 
 //chart.js - main traffic
 //create datasets for main traffic chart
-let hourlyData = [ 0, 750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1500, 2000, 1500, 2250 ];
-let dailyData = [ 250, 600, 200, 2400, 3200, 3000, 2900, 1900, 1000, 1200, 200 ];
-let weeklyData = [ 10000, 14000, 24000, 20000, 13000, 13400, 25000, 23000, 15000, 20000, 30000 ];
-let monthlyData = [ 240000, 500000, 450000, 700000, 600000, 400000, 500000, 600000, 300000, 400000, 650000 ];
+let hourlyData = [
+	0,
+	750,
+	1250,
+	1000,
+	1500,
+	2000,
+	1500,
+	1750,
+	1250,
+	1500,
+	2000,
+	1500,
+	2250
+];
+let dailyData = [
+	250,
+	600,
+	200,
+	2400,
+	3200,
+	3000,
+	2900,
+	1900,
+	1000,
+	1200,
+	200
+];
+let weeklyData = [
+	10000,
+	14000,
+	24000,
+	20000,
+	13000,
+	13400,
+	25000,
+	23000,
+	15000,
+	20000,
+	30000
+];
+let monthlyData = [
+	240000,
+	500000,
+	450000,
+	700000,
+	600000,
+	400000,
+	500000,
+	600000,
+	300000,
+	400000,
+	650000
+];
 
 const ctx = document.querySelector('#traffic-chart').getContext('2d');
 const trafficChart = new Chart(ctx, {
-	type: 'line',
-	data: {
-		labels: [ '16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31' ],
-		datasets: [
+	type    : 'line',
+	data    : {
+		labels   : [
+			'16-22',
+			'23-29',
+			'30-5',
+			'6-12',
+			'13-19',
+			'20-26',
+			'27-3',
+			'4-10',
+			'11-17',
+			'18-24',
+			'25-31'
+		],
+		datasets : [
 			{
-				label: 'Stuff',
-				backgroundColor: 'rgba(115,119,191, 0.1)',
-				lineTension: 0,
-				pointRadius: 6,
-				pointBackgroundColor: 'white',
-				pointBorderWidth: 3,
-				borderColor: 'rgb(115,119,191)',
-				data: hourlyData
+				label                : 'Stuff',
+				backgroundColor      : 'rgba(115,119,191, 0.1)',
+				lineTension          : 0,
+				pointRadius          : 6,
+				pointBackgroundColor : 'white',
+				pointBorderWidth     : 3,
+				borderColor          : 'rgb(115,119,191)',
+				data                 : hourlyData
 			}
 		]
 	},
-	options: {
-		responsive: true,
-		legend: {
-			display: false
+	options : {
+		responsive : true,
+		legend     : {
+			display : false
 		}
 	}
 });
@@ -98,47 +160,109 @@ function changeButton(e) {
 //chart.js - daily traffic
 const dtc = document.querySelector('#daily-traffic-chart').getContext('2d');
 const dailyChart = new Chart(dtc, {
-	type: 'bar',
-	data: {
-		labels: [ 'S', 'M', 'T', 'W', 'T', 'F', 'S' ],
-		datasets: [
+	type    : 'bar',
+	data    : {
+		labels   : [
+			'S',
+			'M',
+			'T',
+			'W',
+			'T',
+			'F',
+			'S'
+		],
+		datasets : [
 			{
-				barPercentage: 0.5,
-				backgroundColor: 'rgb(77, 76, 114)',
-				data: [ 75, 100, 175, 125, 225, 200, 100 ]
+				barPercentage   : 0.5,
+				backgroundColor : 'rgb(77, 76, 114)',
+				data            : [
+					75,
+					100,
+					175,
+					125,
+					225,
+					200,
+					100
+				]
 			}
 		]
 	},
-	options: {
-		responsive: true,
-		legend: {
-			display: false
+	options : {
+		responsive : true,
+		legend     : {
+			display : false
 		}
 	}
 });
 
 const muc = document.querySelector('#mobile-users-chart').getContext('2d');
 const mobileUsersChart = new Chart(muc, {
-	type: 'doughnut',
-	data: {
-		labels: [ 'Phone', 'Tablet', 'Desktop' ],
-		datasets: [
+	type    : 'doughnut',
+	data    : {
+		labels   : [
+			'Phone',
+			'Tablet',
+			'Desktop'
+		],
+		datasets : [
 			{
-				label: 'Users %',
-				backgroundColor: [ '#3e95cd', '#8e5ea2', '#3cba9f' ],
-				data: [ 34, 45, 23 ]
+				label           : 'Users %',
+				backgroundColor : [
+					'#3e95cd',
+					'#8e5ea2',
+					'#3cba9f'
+				],
+				data            : [
+					34,
+					45,
+					23
+				]
 			}
 		]
 	},
-	options: {
-		legend: {
-			position: 'right',
-			labels: {
-				fontSize: 24
+	options : {
+		legend : {
+			position : 'right',
+			labels   : {
+				fontSize : 24
 			}
 		}
 	}
 });
 
-//bell notifications
-const bell = document.querySelector('#bell-icon');
+//search autocomplete
+const users = [
+	'Victoria Chambers',
+	'Dale Byrd',
+	'Dawn Wood',
+	'Dan Oliver'
+];
+const userField = document.querySelector('#userField');
+const dropDown = document.querySelector('.search-results');
+
+userField.addEventListener('keyup', () => {
+	const input = userField.value.toLowerCase();
+	dropDown.innerHTML = '';
+	const results = users.filter((user) => {
+		return user.toLowerCase().startsWith(input);
+	});
+
+	results.forEach((result) => {
+		const div = document.createElement('DIV');
+		div.innerHTML = result;
+		div.className = 'result-names';
+		dropDown.appendChild(div);
+		dropDown.style.display = 'block';
+	});
+
+	if (input === '') {
+		dropDown.innerHTML = '';
+	}
+});
+
+dropDown.addEventListener('click', (e) => {
+	const item = e.target;
+	userField.value = item.textContent;
+	dropDown.innerHTML = '';
+	dropDown.style.display = 'none';
+});
